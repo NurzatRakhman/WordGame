@@ -6,24 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-     <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -48,60 +35,41 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
-    <div class="container">
-    </div><!-- /.container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-	
-	   <div class="jumbotron">
-        <h1>Word Game</h1>
-        <p>Scrabble is a fun, and classic, word game. The object of the game is to get the most points. 
-      </div>
-      <p>
-        <button type="button" class="btn btn-lg btn-success">New hand</button>
-        <button type="button" class="btn btn-lg btn-info">Replay hand</button>
-        <button type="button" class="btn btn-lg btn-warning">Quit hand</button>
-        <button type="button" class="btn btn-lg btn-danger">Help</button>
-      </p>
-	  
-	<p>
-	  <button type="button" class="btn btn-primary btn-lg">Play Word</button>
-	</p>
-	
-	<div class = "container">
-		<form class="form-inline" role="form">
-		  <div class="form-group has-success has-feedback">
-			<label class="control-label" for="inputSuccess4">Enter Your Word here</label>
-			<input type="text" class="form-control" id="inputSuccess4">
-			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-		  </div>
-	</form>
-	</div>
-	
-	<p class="text-left">Your Letters</p>
-	
-		<textarea rows="1" cols="40">
-		...
-		</textarea>
-	<p class="text-left">Your score</p>
-		<textarea rows="1" cols="10">
-		...
-		</textarea>
-	<p class="text-left">Your words: </p>
-		<textarea rows="4" cols="40">
-		...
-		</textarea>	
-	
+  
+  <div class = "container">
+    <div class="jumbotron">
+      <h1>Word Game</h1>
+      <p>Scrabble is a fun, and classic, word game. The object of the game is to get the most points. 
+    </div>
+    <p>
+      <button type="button" class="btn btn-lg btn-success" onclick="location.reload();">New hand</button>
+      <button type="button" class="btn btn-lg btn-info" onclick="replay();">Replay hand</button>
+      <button type="button" class="btn btn-lg btn-warning" onclick="location.reload();">Quit hand</button>
+      <button type="button" class="btn btn-lg btn-danger" onclick="alert('DIY');">Help</button>
+    </p>
+    
+    <p>
+      <button type="button" class="btn btn-primary btn-lg" location.reload();>Play Word</button>
+    </p>
+  
+    <label for="inp">Input:</label>    
+    <input type="text" class="form-control" id="inp" placeholder="Enter Your Word here">
+    
+    <label for="chars">Your Letters:</label>
+    <h1 id="chars"></h1>
+    
+    <label for="score">Your score:</label>
+    <h1 id="score">0</h1>
+    
+    <label for="words">Your words: </label>
+    <ul id="words"></ul>
+    
+  </div>
+  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
- 
+    <script src="words.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

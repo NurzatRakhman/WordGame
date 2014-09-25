@@ -11,6 +11,11 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="words.js"></script>
+    <script src="app.js"></script>
   </head>
 
   <body>
@@ -42,19 +47,15 @@
       <p>Scrabble is a fun, and classic, word game. The object of the game is to get the most points. 
     </div>
     <p>
-      <button type="button" class="btn btn-lg btn-success" onclick="location.reload();">New hand</button>
-      <button type="button" class="btn btn-lg btn-info" onclick="replay();">Replay hand</button>
-      <button type="button" class="btn btn-lg btn-warning" onclick="location.reload();">Quit hand</button>
-      <button type="button" class="btn btn-lg btn-danger" onclick="alert('DIY');">Help</button>
+      <button type="button" class="btn btn-lg btn-success" onclick="location.reload();"><strong>N</strong>ew hand</button>
+      <button type="button" class="btn btn-lg btn-info" id="bReplay" ><strong>R</strong>eplay hand</button>
+      <button type="button" class="btn btn-lg btn-warning" onclick="location.reload();"><strong>Q</strong>uit hand</button>
+      <button type="button" class="btn btn-lg btn-danger" onclick="alert('DIY');"><strong>H</strong>elp</button>
     </p>
     
-    <p>
-      <button type="button" class="btn btn-primary btn-lg" location.reload();>Play Word</button>
-    </p>
-  
-    <label for="inp">Input:</label>    
-    <input type="text" class="form-control" id="inp" placeholder="Enter Your Word here">
-    
+    <p><button type="button" class="btn btn-primary btn-lg" id="bPlayWord" ><strong>P</strong>lay Word</button><span id="mesgArea"></span></p>
+    <input type="text" class="form-control" id="txtGuess" placeholder="Enter Your Word here"/>
+    <br/>
     <label for="chars">Your Letters:</label>
     <h1 id="chars"></h1>
     
@@ -66,10 +67,5 @@
     
   </div>
   
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="words.js"></script>
-    <script src="app.js"></script>
   </body>
 </html>

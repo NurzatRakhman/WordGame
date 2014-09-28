@@ -8,6 +8,7 @@ function getRandomInt (min, max)
 {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 function getRandomMax (max) {
 	return Math.floor(Math.random() * max);
 }
@@ -174,22 +175,26 @@ function Hand(dealtLetters)
 }
 
 
-function replay () {
-	$('#words').html("");
-	$("#score").html(0);
-	$('#mesgArea').html("");
-	$('#bPlayWord').prop("disabled",true);
-	$('#txtGuess').prop("disabled",true);
-	$('#chars').html(game.currentHand.GetRemaining().split("").join(" "));
-};
-
 $(function() {
 	
 	var game = new Game();
 	//game.LoadWords();
 	game.NewHand();
 	
-	$('#chars').html(game.currentHand.GetRemaining().split("").join(" "));
+	$('#hLetters').val(game.currentHand.GetRemaining().split("").join(" "));
+	$('#chars').html($('#hLetters').val());
+	
+	$('#bReplay').on('click',function () {
+		
+		game.currentHand.ResetHand();
+		$('#words').html("");
+		$("#score").html(0);
+		$('#mesgArea').html("");
+		$('#bPlayWord').prop("disabled",false);
+		$('#txtGuess').prop("disabled",false);
+		$('#chars').html($('#hLetters').val());
+	
+	});
 	
 	function tryWord() {
 		var guessWord = $('#txtGuess').val();

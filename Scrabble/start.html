@@ -47,11 +47,10 @@
       <p>Scrabble is a fun, and classic, word game. The object of the game is to get the most points. 
     </div>
     <p>
-      <button type="button" class="btn btn-lg btn-success" onclick="location.reload();"><strong>N</strong>ew hand</button>
+      <button type="button" class="btn btn-lg btn-success" id="bNew"><strong>N</strong>ew hand</button>
       <button type="button" class="btn btn-lg btn-info" id="bReplay"><strong>R</strong>eplay hand</button>
-      <button type="button" class="btn btn-lg btn-warning" onclick="location.reload();"><strong>Q</strong>uit hand</button>
-      <button type="button" class="btn btn-lg btn-danger" onclick="alert('DIY');"><strong>H</strong>elp</button>
-	  <input type="hidden" id="hLetters" value=""></input>
+      <button type="button" class="btn btn-lg btn-danger" id="bHelp" onclick="alert('DIY');"><strong>H</strong>elp</button>
+	  
     </p>
     
     <p><button type="button" class="btn btn-primary btn-lg" id="bPlayWord" ><strong>P</strong>lay Word</button><span id="mesgArea"></span></p>
